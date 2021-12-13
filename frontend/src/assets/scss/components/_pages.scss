@@ -1,0 +1,10 @@
+.content-section {
+    padding-top: 26px;
+    min-height: 89vh;
+    background-color: #f4f9fe;
+}
+@media (min-width: 768px) {
+    .content-section {
+        padding-top: 61px;
+    }
+}

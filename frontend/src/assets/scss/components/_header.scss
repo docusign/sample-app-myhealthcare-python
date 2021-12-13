@@ -1,0 +1,52 @@
+.header {
+    background-color: #F6FAFF !important;
+    border-bottom: 2px solid #E7E7EE;
+    color: #0d1b31;
+    font-size: 14px;
+    font-weight: 600;
+}
+.navbar {
+    background-color: #F6FAFF !important;
+    min-height: 67px;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-name {
+    text-transform: uppercase;
+}
+.nav-link {
+    margin-top: 4px;
+    margin-left: 24px;
+    color: #0d1b31 !important;
+}
+.nav-link:active {
+    color: #525964 !important;
+}
+
+.login-btn {
+    background-color: white;
+    width: 98px;
+    height: 44px;
+    padding-bottom: 3px;
+    border-radius: 2px;
+    box-shadow: 0 -9px 44px 0 rgba(51, 76, 207, 0.13);
+    color: #ea2291;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+}
+.login-btn:focus {
+    outline: 0;
+}
+.login-btn:active {
+    box-shadow: 0 4px 4px 0 rgba(51, 76, 207, 0.13);
+    border: none;
+}
+
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    outline: 0;
+}

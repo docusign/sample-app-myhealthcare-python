@@ -1,0 +1,15 @@
+{
+  "Title": "Apply for Patient Assistance",
+
+  "FirstName": "First name:",
+  "LastName": "Last name:",
+  "Email": "Email:",
+  "ErrorText": "This field is required.",
+
+  "ButtonName": "Submit",
+
+  "SeeMore": {
+    "Title": "See behind the scenes",
+    "Text": "<h3>This sample features:</h3><ul><li>Embedded signing</li><li>Templates</li><li>Signer attachment tab</li></ul><h3>Code flow:</h3><h5>Step 1</h5><p>When the button is selected, we call the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Templates/Templates/create'>Templates:create</a> method to create a new template with the required fields and documents and a single placeholder recipient.</code></p><h5>Step 2</h5><p>We proceed to create an envelope from the template by using the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, using the provided email address and name for the recipient.</p><h5>Step 3</h5>We make an API call to the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient'>EnvelopeViews:createRecipient</a> method with a <code>returnUrl</code> back into the app. We direct the browser to go to the URL that we get back from the aforementioned API call.</p>"
+  }
+}

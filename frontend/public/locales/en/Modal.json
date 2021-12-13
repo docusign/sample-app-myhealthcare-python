@@ -1,0 +1,10 @@
+{
+    "Title": "Log in with DocuSign",
+    "LearnMore": "Learn about <a href='https://developers.docusign.com/docs/esign-rest-api/esign101/auth/' target='_blank' rel='noopener noreferrer'>authentication options with DocuSign</a>.",
+    "AboutIDVAndSMS" : "If your account does not have IDV and SMS options enabled, use the preconfigured account to run the first and second examples. Read about <a href='https://support.docusign.com/en/guides/ID-Verification-Q-A' target='_blank' rel='noopener noreferrer'>IDV</a> and <a href='https://support.docusign.com/en/guides/ndse-user-guide-sms-delivery' target='_blank' rel='noopener noreferrer'>SMS</a>.",
+
+    "LoginOauth": "Log in with your DocuSign account",
+    "LoginJWT": "Continue with a preconfigured account",
+
+    "Warning": "<a href='https://go.docusign.com/o/sandbox/' target='_blank' rel='noopener noreferrer'>Create a free DocuSign developer account</a>, if you don't already have one."
+}

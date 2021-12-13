@@ -1,0 +1,23 @@
+{
+  "Title": "MyHealthcare DocuSign Sample Application for the healthcare industry",
+  "Description": "This application demonstrates some common DocuSign API workflows including DocuSign eSignature and real-time status.",
+  "SourceDescription": "Source on GitHub:",
+  "SourceLink": "https://github.com/docusign/sample-app-myhealthcare-python",
+
+  "FeaturesTitle": "MyHealthcare features:",
+  "FeaturesList": "<li>Remote signing</li><li>Templates</li><li>IDV (recipient authentication)</li><li>SMS delivery</li><li>Data entry tabs</li><li>Anchor positioning</li><li>Embedded signing</li><li>Signer attachment tabs</li>",
+
+  "ToolsAndLinksTitle": "API Tools and Links",
+  "DeveloperCenter": "Developer Center",
+  "DeveloperCenterLink": "https://developers.docusign.com",
+  "APICodeExamples": "DocuSign eSignature API Code Examples",
+  "APICodeExamplesLink": "https://developers.docusign.com/esign-rest-api/code-examples",
+  "ESignatureDocumentation": "DocuSign eSignature API Documentation",
+  "ESignatureDocumentationLink": " https://developers.docusign.com/esign-rest-api/reference",
+  "DeveloperCommunity": "Developer Community",
+  "DeveloperCommunityLink": "http://stackoverflow.com/questions/tagged/docusignapi",
+
+  "AboutDocuSign": "<h3>About DocuSign</h3><ul><li>More than <strong>400 million users</strong> in <strong>188 countries</strong></li><li>More than 300,000 companies</li><li>More than 300,000 new unique users join The DocuSign Global Trust Network every day</li><li>More than 64% of documents are completed within one hour</li>    <li>DocuSign is available in <strong>43 languages</strong></li></ul>",
+  "DSName": "DocuSign.com",
+  "DSLink": "http://www.docusign.com/"
+}

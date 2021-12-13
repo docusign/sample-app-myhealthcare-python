@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+body {
+    background-color: #fff;
+    font-size: 14px;
+    font-family: 'Open sans', sans-serif;
+}
+
+@import "header";
+@import "hero";
+@import "cards";
+@import "prefooter";
+@import "footer";
+@import "pages";
+@import "form";
+@import "seeMore";
+@import "modal";
+@import "backdrop";

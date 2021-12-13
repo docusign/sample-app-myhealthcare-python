@@ -1,0 +1,33 @@
+{
+  "Header1": {
+    "P1": "Welcome to ",
+    "P2": "MyHealthcare"
+  },
+  "Header2": "A self-service patient portal",
+
+  "Card1": {
+    "Title": "Request Medical Records",
+    "Button": "Get Started",
+    "FeaturesTitle": "DocuSign features:",
+    "FeaturesList": "<li>Remote signing</li><li>Templates</li><li>IDV (recipient authentication)</li>"
+  },
+  "Card2": {
+    "Title": "COVID-19 Consent Form",
+    "Button": "Get Started",
+    "FeaturesTitle": "DocuSign features:",
+    "FeaturesList": "<li>SMS delivery</li><li>Templates</li><li>Data entry tabs</li><li>Anchor positioning</li>"
+  },
+  "Card3": {
+    "Title": "Apply for Patient Assistance",
+    "Button": "Get Started",
+    "FeaturesTitle": "DocuSign features:",
+    "FeaturesList": "<li>Embedded signing</li><li>Templates</li><li>Signer attachment tab</li>"
+  },
+
+  "PreFooter1": "DocuSign: It's time to agree better",
+  "PreFooter2": "DocuSign helps organizations connect and automate how they prepare, sign, act on, and manage agreements.",
+  "GetFreeLinkName": "Get a free developer account",
+  "GetFreeLink": "https://go.docusign.com/sandbox/productshot?elq=16799",
+  "PythonSDKLinkName": "Python SDK documentation",
+  "PythonSDKLink": "https://developers.docusign.com/docs/esign-rest-api/sdk-tools/python/"
+}

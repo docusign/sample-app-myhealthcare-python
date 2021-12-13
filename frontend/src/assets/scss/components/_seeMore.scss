@@ -1,0 +1,25 @@
+.bs-holder {
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #05003b;
+}
+@media (min-width: 768px) {
+    .bs-holder {
+        max-width: 540px;
+    }
+}
+.bs-link {
+    font-size: 22px;
+    font-weight: 600;
+    color: #05003b;
+}
+.bs h3, .bs h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.bs h5 {
+    font-size: 1rem;
+    font-weight: 700;
+}

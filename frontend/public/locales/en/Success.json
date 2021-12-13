@@ -1,0 +1,14 @@
+{
+  "Option1": {
+    "Title": "Successfully sent request!",
+    "Description": "Your request for signing a document has been sent to the specified email."
+  },
+  "Option2": {
+    "Title": "Signing Complete!",
+    "Description": "You have signed the document. The document will be securely stored on the DocuSign, Inc. servers."
+  },
+  "BackLink": "Back to Home",
+  "SandboxText": "Get Started with the DocuSign APIs Today",
+  "SandboxButton": "Get Your Developer Account",
+  "Description": "With a developer account, you can test our APIs for free. Developer accounts do not expire and have enterprise-level features enabled."
+}

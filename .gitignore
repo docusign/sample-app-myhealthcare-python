@@ -1,0 +1,12 @@
+*.pyc
+.idea
+.env
+
+__pycache__
+
+# pyenv
+.python-version
+venv/
+
+# Security key files
+private.key

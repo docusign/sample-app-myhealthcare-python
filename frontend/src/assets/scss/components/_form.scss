@@ -1,0 +1,69 @@
+.form-holder {
+    max-width: 400px;
+    background-color: #fff;
+    padding-top: 42px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-radius: 2px;
+    box-shadow: 0px 9px 20px rgba(51, 76, 207, 0.13);
+}
+.form-title{
+    margin-bottom: 27px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #05003b;
+}
+@media (min-width: 768px) {
+    .form-title{
+        font-size: 32px;
+    }
+    .form-holder {
+        margin-left: 17px;
+        margin-right: 17px;
+        max-width: 540px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media (min-width: 992px) {
+    .form-holder {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.form-group{
+    margin-bottom: 22px;
+}
+.form-holder label::after{
+    content: "*";
+    padding-left: 8px;
+    color: #ff229b;
+}
+.last-form-group {
+    margin-bottom: 40px;
+}
+
+.phone-number{
+    margin-bottom: 59px;
+}
+#CountryCode {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+#PhoneNumber {
+    width: 70%;
+    display: inline-block;
+    float: left;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left:0px;
+}
+
+.field-error {
+    color: red;
+    text-align: right;
+}
