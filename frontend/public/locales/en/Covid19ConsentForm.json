@@ -13,7 +13,7 @@
   "ButtonName": "Submit",
 
   "SeeMore": {
-    "Title": "- See behind the scenes",
+    "Title": "See behind the scenes",
     "Text": "<h3>This sample features:</h3><ul><li>SMS delivery</li><li>Templates</li><li>Data entry tabs</li><li>Anchor positioning</li></ul><h3>Code flow:</h3><h5>Step 1</h5>When the button is selected, we ask the user to provide a name, email address, and phone number for the patient. The information will be used to fill in a placeholder recipient that is in the template. We then call the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Templates/Templates/create'>Templates:create</a> method to create a new template with the required fields, documents, and a single placeholder recipient.</p><h5>Step 2</h5>We proceed to create an envelope from the template by using the <a target='_blank' rel='noopener noreferrer' href='https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, using the provided email address and name for the recipient. We then use the phone number provided to add an additional SMS notification for envelope delivery. The envelope is created and immediately sent out for remote signing by the single recipient. The recipient receives an email and a text message that includes a link to sign the COVID-19 consent form.</p>"
   }
 }
