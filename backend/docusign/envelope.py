@@ -6,7 +6,6 @@ from docusign_esign import (
     RecipientPhoneNumber,
     RecipientAdditionalNotification,
     RecipientViewRequest,
-    CarbonCopy,
     Tabs,
     Text,
     Email
@@ -41,7 +40,7 @@ class Envelope:
         )
 
         tabs = Tabs(
-          email_tabs=[email] #, text_tabs=[date_signed]
+          email_tabs=[email]
         )
 
         # create the envelope definition
@@ -82,12 +81,9 @@ class Envelope:
         phone_number = Text(
           tab_label="phone_number", value=f'{args["country_code"]}{args["phone_number"]}'
         )
-        date_signed = Text(
-          tab_label="date_signed", value=datetime.now().strftime("%m-%d-%Y")
-        )
 
         tabs = Tabs(
-          email_tabs=[email], text_tabs=[first_name, last_name, phone_number, date_signed]
+          email_tabs=[email], text_tabs=[first_name, last_name, phone_number]
         )
 
         phone_number = RecipientPhoneNumber(
@@ -131,12 +127,9 @@ class Envelope:
         last_name = Text(
           tab_label="last_name", value=args["last_name"]
         )
-        date_signed = Text(
-          tab_label="date_signed", value=datetime.now().strftime("%m-%d-%Y")
-        )
 
         tabs = Tabs(
-          text_tabs=[first_name, last_name, date_signed]
+          text_tabs=[first_name, last_name]
         )
 
         # Create template role elements to connect the signer to the template
