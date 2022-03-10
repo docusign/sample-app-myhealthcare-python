@@ -1,5 +1,5 @@
 from datetime import datetime
-from docusign_esign import Signer, Text, Email, Tabs, SignHere, DateSigned, Checkbox, TabGroup
+from docusign_esign import Signer, Text, Tabs, SignHere, DateSigned, Checkbox, TabGroup
 
 def make_covid_19_consent_form_signer(args):
     """
@@ -56,11 +56,6 @@ def make_covid_19_consent_form_signer(args):
         document_id="1", page_number="1", required="true", tab_label="phone_number",
         height="12", width="150",
         anchor_string="Phone Number", anchor_units="pixels", anchor_y_offset="12"
-    )
-    email = Email(
-        document_id="1", page_number="1", required="true", tab_label="email",
-        height="12", width="150",
-        anchor_string="Email", anchor_units="pixels", anchor_y_offset="12"
     )
 
     check1 = Checkbox(
@@ -241,7 +236,6 @@ def make_covid_19_consent_form_signer(args):
             last_name, first_name, birth_date, address, city, state, zip, phone_number,
             first_dose_date, first_dose_name
         ],
-        email_tabs=[email],
         checkbox_tabs=[
             check1, check2,
             check3, check4,

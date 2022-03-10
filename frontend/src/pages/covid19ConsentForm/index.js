@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import InputText from "../../components/inputText";
 import InputPhone from "../../components/inputPhone";
-import InputEmail from "../../components/inputEmail";
 import SeeMore from "../../components/seeMore";
 import { sendRequest } from "../../api/healthcareAPI";
 import { getStatus } from "../../api/auth";
@@ -15,7 +14,7 @@ const Covid19ConsentForm = () => {
     const { t } = useTranslation("Covid19ConsentForm");
 
     const [ submitted, setSubmitted ] = useState(false);
-    const [ formError, setFormError ] = useState([true, true, true, true]);
+    const [ formError, setFormError ] = useState([true, true, true]);
     const [ apiError, setApiError ] = useState("");
 
     const { setBackdrop, logged, setLogged } = useContext(AppContext)
@@ -44,7 +43,6 @@ const Covid19ConsentForm = () => {
         const body = {
             first_name: el.FirstName.value,
             last_name: el.LastName.value,
-            email: el.Email.value,
             country_code: el.CountryCode.value,
             phone_number: el.PhoneNumber.value
         };
@@ -102,16 +100,6 @@ const Covid19ConsentForm = () => {
                                 setFormError={setFormError}
                                 formError={formError}
                                 formErrorNum={2}
-                                submitted={submitted}
-                            />
-                            <InputEmail
-                                id="Email"
-                                label={t("Email")}
-                                warn={t("EmailWarn")}
-                                errorText={t("ErrorText")}
-                                setFormError={setFormError}
-                                formError={formError}
-                                formErrorNum={3}
                                 submitted={submitted}
                             />
                             <button className="h-card-button" type="submit">{t("ButtonName")}</button>

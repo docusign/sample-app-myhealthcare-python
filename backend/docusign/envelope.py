@@ -75,33 +75,25 @@ class Envelope:
         last_name = Text(
           tab_label="last_name", value=args["last_name"]
         )
-        email = Email(
-          tab_label="email", value=args["email"]
-        )
         phone_number = Text(
           tab_label="phone_number", value=f'{args["country_code"]}{args["phone_number"]}'
         )
 
         tabs = Tabs(
-          email_tabs=[email], text_tabs=[first_name, last_name, phone_number]
+          text_tabs=[first_name, last_name, phone_number]
         )
 
-        phone_number = RecipientPhoneNumber(
+        phoneNumber = RecipientPhoneNumber(
             country_code=args["country_code"],
             number=args["phone_number"]
         )
 
-        sms_notification = RecipientAdditionalNotification(
-            phone_number=phone_number,
-            secondary_delivery_method="SMS"
-        )
         # Create template role elements to connect the signer to the template
         signer = TemplateRole(
-            email=args["email"],
             name=f'{args["first_name"]} {args["last_name"]}',
             role_name="signer",
             tabs=tabs,
-            additional_notifications=[sms_notification]
+            phone_number=phoneNumber
         )
 
         # create the envelope definition
