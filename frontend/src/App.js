@@ -19,11 +19,17 @@ function App() {
   const [modalShow, setModalShow] = useState(false);
   const [nextPage, setNextPage] = useState("");
   const [backdrop, setBackdrop] = useState(0);
+  const axios = require('axios').default;
 
   useEffect(() => {
     getStatus(setLogged);
   }, []);
-
+/*
+  if (window.location.origin === "http://localhost:3000") {
+	    axios.defaults.baseURL = "http://127.0.0.1:5001";
+  } else {
+	    axios.defaults.baseURL = window.location.origin;
+  }*/
   return (
     <Suspense fallback="">
       <AppContext.Provider
