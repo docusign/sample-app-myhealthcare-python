@@ -23,8 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET') 
-#'fq49#03k*!n&)z2qh!ke*g7w)!zo@^s6y+ezu@11b=c9be(!h=' 
+SECRET_KEY = os.environ.get('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -120,7 +119,7 @@ DEBUG = True
 #STATIC_ROOT = ""
 
 MEDIA_URL = '/media/'
-STATIC_URL = '/django_static/' 
+STATIC_URL = '/django_static/'
 STATIC_ROOT = BASE_DIR / 'django_static'
 
 # CORS
