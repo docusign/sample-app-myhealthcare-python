@@ -7,7 +7,6 @@ class RequestMedicalRecordsSerializer(Serializer):
 class Covid19ConsentFormSerializer(Serializer):
     first_name=CharField()
     last_name=CharField()
-    email=EmailField()
     country_code=CharField(
         max_length=5, min_length=1, allow_blank=False, trim_whitespace=True
     )

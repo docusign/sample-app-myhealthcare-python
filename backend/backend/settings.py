@@ -115,8 +115,12 @@ DEBUG = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/staticbackend/'
-STATIC_ROOT = ""
+#STATIC_URL = '/staticbackend/'
+#STATIC_ROOT = ""
+
+MEDIA_URL = '/media/'
+STATIC_URL = '/django_static/'
+STATIC_ROOT = BASE_DIR / 'django_static'
 
 # CORS
 CORS_ALLOWED_ORIGINS = [
