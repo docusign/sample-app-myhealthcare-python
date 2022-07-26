@@ -30,7 +30,7 @@ MyHealthcare demonstrates the following:
 ### Prerequisites
 * A DocuSign Developer account (email and password) on [demo.docusign.net](https://demo.docusign.net). If you don't already have a developer account, create a [free account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16535).
 * A DocuSign integration key (a client ID) that is configured to use **JSON Web Token (JWT) Grant**.
-   You will need the **integration key** itself and its **RSA key pair**. To use this application, you must add your application's **Redirect URI** to your integration key. This [**video**](https://www.youtube.com/watch?v=GgDqa7-L0yo) demonstrates how to create an integration key (client ID) for a user application like this example.
+   You will need the **integration key** itself and its **RSA key pair**. To use this application, you must add your application's **Redirect URI** to your integration key. To run locally, add http://localhost:3000/callback as your **Reidirect URI**. This [**video**](https://www.youtube.com/watch?v=GgDqa7-L0yo) demonstrates how to create an integration key (client ID) for a user application like this example.
 * [Python 3.7+](https://www.python.org/downloads/)
 * The Python [venv](https://docs.python.org/3/library/venv.html#module-venv) module
 * [Node.js](https://nodejs.org/) v10+
