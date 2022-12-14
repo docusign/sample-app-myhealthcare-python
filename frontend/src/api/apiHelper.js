@@ -6,13 +6,13 @@ export async function handleResponse(response) {
     const error = await response.text();
     throw new Error(error);
   }
-  throw new Error("API response error.");
+  throw new Error(response);
 }
 
 export function handleError(error, setShowModal=undefined) {
   if (error.response && error.response.status === 402) {
     setShowModal(true);
   }
-  console.error("API call failed. " + error);
+  console.error("API call failed. " + JSON.stringify(error));
   throw error;
 }

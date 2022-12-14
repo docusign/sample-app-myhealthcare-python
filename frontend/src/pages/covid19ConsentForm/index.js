@@ -7,6 +7,7 @@ import InputPhone from "../../components/inputPhone";
 import SeeMore from "../../components/seeMore";
 import { sendRequest } from "../../api/healthcareAPI";
 import { getStatus } from "../../api/auth";
+import parse from 'html-react-parser';
 
 const Covid19ConsentForm = () => {
     let history = useHistory();
@@ -37,7 +38,7 @@ const Covid19ConsentForm = () => {
         if (!logged) history.push("")
 
         if (!isFormValid()) return;
-        
+
         setBackdrop(true);
         const el = event.target.elements;
         const body = {
@@ -49,8 +50,12 @@ const Covid19ConsentForm = () => {
 
         try{
             const response = await sendRequest(body, "/covid19-consent-form");
-            if (response.data.message.includes("SMS")) 
-                setApiError(t("ErrorSMSNotEnabled"))
+            if(response.data.message.includes("OPTED_OUT_PHONE_NUMBER_FOR_RECIPIENT"))
+              setApiError(t("ErrorOptedOut"));
+            else if (response.data.message.includes("SIGNER_CONSENT_PENDING_OR_DECLINED"))
+              setApiError(t("ErrorDidNotConsent"));
+            else if (response.data.message.includes("SMS"))
+                setApiError(t("ErrorSMSNotEnabled"));
             else
                 history.push("/success");
         } catch (error) {
@@ -66,7 +71,7 @@ const Covid19ConsentForm = () => {
                 {apiError &&
                     <div className="text-center">
                             <div className="alert alert-danger" role="alert">
-                                {apiError}
+                                {parse(apiError)}
                             </div>
                     </div>
                 }

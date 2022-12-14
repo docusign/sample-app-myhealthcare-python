@@ -7,8 +7,9 @@
 
   "ErrorText": "This field is required.",
   "ErrorTextInv": "This field is invalid.",
-  "ErrorSMSNotEnabled" : "SMS option is not enabled in your account",
-
+  "ErrorSMSNotEnabled" : "SMS option is not enabled in your account.",
+  "ErrorDidNotConsent" : "The envelope cannot be sent to recipient. Signer has not given consent to receive SMS notifications.",
+  "ErrorOptedOut" : "Recipient has opted out of mobile messages. See <a target='_blank' rel='noopener noreferrer' href='https://support.docusign.com/s/articles/sms-service?language=en_US&rsc_301'>details</a> on how to opt in.",
   "ButtonName": "Submit",
 
   "SeeMore": {

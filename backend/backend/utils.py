@@ -23,6 +23,11 @@ def error_processing(func):
                     'response': 'Permissions should be granted for current integration',
                     'url': consent_url}, status=status.HTTP_401_UNAUTHORIZED)
 
+            if "SIGNER_CONSENT_PENDING_OR_DECLINED" in body or "OPTED_OUT_PHONE_NUMBER_FOR_RECIPIENT" in body:
+              return Response({
+                'message': body
+              })
+
             return Response({
                 'reason': exc.reason,
                 'response': exc.body.decode('utf8')
