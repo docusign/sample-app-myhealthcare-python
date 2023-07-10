@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { getStatus } from "./api/auth";
 import AppContext from "./context/appContext";
 import Header from "./components/header";
@@ -36,14 +36,14 @@ function App() {
         value={{ modalShow, setModalShow, logged, setLogged, nextPage, setNextPage, setBackdrop }}
       >
         <Header />
-        <Switch>
-          <Route path="/request-medical-records" component={RequestMedicalRecords} />
-          <Route path="/covid19-consent-form" component={Covid19ConsentForm} />
-          <Route path="/apply-for-patient-assistance" component={ApplyForPatientAssistance} />
-          <Route path="/success" component={Success} />
-          <Route path="/" exact component={Home} />
-          <Route path="/callback" component={Callback} />
-        </Switch>
+        <Routes>
+          <Route path="/request-medical-records" element={<RequestMedicalRecords/>} />
+          <Route path="/covid19-consent-form" element={<Covid19ConsentForm/>} />
+          <Route path="/apply-for-patient-assistance" element={<ApplyForPatientAssistance/>} />
+          <Route path="/success" element={<Success/>} />
+          <Route path="/" exact element={<Home/>} />
+          <Route path="/callback" element={<Callback/>} />
+        </Routes>
 
         <ModalLogin modalShow={modalShow} setModalShow={setModalShow} />
 

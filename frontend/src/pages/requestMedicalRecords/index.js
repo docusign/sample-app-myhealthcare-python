@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import AppContext from "../../context/appContext";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InputText from "../../components/inputText";
 import InputEmail from "../../components/inputEmail";
 import SeeMore from "../../components/seeMore";
@@ -9,7 +9,7 @@ import { sendRequest } from "../../api/healthcareAPI";
 import { getStatus } from "../../api/auth";
 
 const RequestMedicalRecords = () => {
-    let history = useHistory();
+    let navigate = useNavigate();
 
     const { t } = useTranslation("RequestMedicalRecords");
 
@@ -20,7 +20,7 @@ const RequestMedicalRecords = () => {
     const { setBackdrop, logged, setLogged } = useContext(AppContext)
 
     useEffect(() => {
-        if (!logged) history.push("")
+        if (!logged) navigate("")
     }, )
 
     function isFormValid() {
@@ -30,11 +30,11 @@ const RequestMedicalRecords = () => {
     async function handleSubmit (event) {
         event.preventDefault();
 
-        getStatus(setLogged, history);
+        getStatus(setLogged, navigate);
         setApiError("")
 
         setSubmitted(true);
-        if (!logged) history.push("")
+        if (!logged) navigate("")
         
         if (!isFormValid()) return;
         
@@ -50,7 +50,7 @@ const RequestMedicalRecords = () => {
             if (response.data.message.includes("IDV")) 
                 setApiError(t("ErrorIDVNotEnabled"))
             else 
-                history.push("/success");
+                navigate("/success");
         } catch (error) {
             setApiError(error.message)
         } finally {

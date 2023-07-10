@@ -55,7 +55,7 @@ export async function logOut() {
     }
 }
 
-export async function getStatus(setStatus, history=undefined) {
+export async function getStatus(setStatus, navigate=undefined) {
     try {
         let response = await axios.get(
             process.env.REACT_APP_API_BASE_URL + "/get_status",
@@ -66,7 +66,7 @@ export async function getStatus(setStatus, history=undefined) {
         setStatus(response.data.logged);
     } catch (error) {
         setStatus(false);
-        history && history.push("");
+        navigate && navigate("");
         handleError(error);
     }
 }

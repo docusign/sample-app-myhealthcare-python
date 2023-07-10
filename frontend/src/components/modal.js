@@ -3,12 +3,12 @@ import AppContext from "../context/appContext";
 import { getStatus, codeGrantAuth } from "../api/auth";
 import { Modal } from "react-bootstrap";
 import { jwtAuth } from "../api/auth";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import parse from "html-react-parser";
 
 const ModalLogin = props => {
-    let history = useHistory();
+    let navigate = useNavigate();
 
     const { t } = useTranslation("Modal");
 
@@ -31,7 +31,7 @@ const ModalLogin = props => {
                 await jwtAuth();
                 await getStatus(setLogged);
                 handleClose();
-                history.push(nextPage)
+                navigate(nextPage)
                 setNextPage("");
             }
         } catch(error) {

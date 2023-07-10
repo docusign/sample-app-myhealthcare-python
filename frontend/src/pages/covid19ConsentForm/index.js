@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import AppContext from "../../context/appContext";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InputText from "../../components/inputText";
 import InputPhone from "../../components/inputPhone";
 import SeeMore from "../../components/seeMore";
@@ -10,7 +10,7 @@ import { getStatus } from "../../api/auth";
 import parse from 'html-react-parser';
 
 const Covid19ConsentForm = () => {
-    let history = useHistory();
+    let navigate = useNavigate();
 
     const { t } = useTranslation("Covid19ConsentForm");
 
@@ -21,7 +21,7 @@ const Covid19ConsentForm = () => {
     const { setBackdrop, logged, setLogged } = useContext(AppContext)
 
     useEffect(() => {
-        if (!logged) history.push("")
+        if (!logged) navigate("")
     }, )
 
     function isFormValid() {
@@ -31,11 +31,11 @@ const Covid19ConsentForm = () => {
     async function  handleSubmit(event) {
         event.preventDefault();
 
-        getStatus(setLogged, history);
+        getStatus(setLogged, navigate);
         setApiError("")
 
         setSubmitted(true);
-        if (!logged) history.push("")
+        if (!logged) navigate("")
 
         if (!isFormValid()) return;
 
@@ -57,7 +57,7 @@ const Covid19ConsentForm = () => {
             else if (response.data.message.includes("SMS"))
                 setApiError(t("ErrorSMSNotEnabled"));
             else
-                history.push("/success");
+                navigate("/success");
         } catch (error) {
             setApiError(error.message)
         } finally {

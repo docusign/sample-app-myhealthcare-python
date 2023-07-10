@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Success = props => {
-    const { t } = useTranslation("Success")
+    const { t } = useTranslation("Success");
+    const location = useLocation();
 
     if (window.top !== window.self) {
         window.top.location.href = process.env.REACT_APP_DS_RETURN_URL + "/success?1";
@@ -12,18 +13,18 @@ const Success = props => {
     return (
         <section className="content-section">
             <div className="container text-center">
-            { !props.location.search &&
+            { !location.search &&
             <h2>{t("Option1.Title")}</h2>
             }
-            { props.location.search === "?1" &&
+            { location.search === "?1" &&
             <h2>{t("Option2.Title")}</h2>
             }
             <br />
             <br />
-            { !props.location.search &&
+            { !location.search &&
             <p>{t("Option1.Description")}</p>
             }
-            { props.location.search === "?1" &&
+            { location.search === "?1" &&
             <p>{t("Option2.Description")}</p>
             }
             <p>
