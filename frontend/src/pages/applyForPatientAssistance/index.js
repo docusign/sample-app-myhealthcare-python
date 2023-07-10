@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import AppContext from "../../context/appContext";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import InputText from "../../components/inputText";
 import InputEmail from "../../components/inputEmail";
 import SeeMore from "../../components/seeMore";
@@ -12,7 +12,8 @@ const urlPath = "/apply-for-patient-assistance"
 const returnUrl = process.env.REACT_APP_DS_RETURN_URL + "/success?1";
 
 const ApplyForPatientAssistance = props => {
-    let history = useHistory();
+    let navigate = useNavigate();
+    const location = useLocation();
 
     const { t } = useTranslation("ApplyForPatientAssistance");
 
@@ -24,7 +25,7 @@ const ApplyForPatientAssistance = props => {
     const { setBackdrop, logged, setLogged } = useContext(AppContext);
 
     useEffect(() => {
-        if (!logged) history.push("")
+        if (!logged) navigate("")
     }, )
 
     function isFormValid() {
@@ -34,11 +35,11 @@ const ApplyForPatientAssistance = props => {
     async function handleSubmit (event) {
         event.preventDefault();
 
-        getStatus(setLogged, history);
+        getStatus(setLogged, navigate);
         setApiError("")
 
         setSubmitted(true);
-        if (!logged) history.push("")
+        if (!logged) navigate("")
 
         if (!isFormValid()) return;
         
@@ -53,7 +54,7 @@ const ApplyForPatientAssistance = props => {
 
         try{
             const response = await sendRequest(body, urlPath);
-            history.push(urlPath + "?signing");
+            navigate(urlPath + "?signing");
             setIframeUrl(response.data.view_url)
         } catch (error) {
             setApiError(error.message)
@@ -62,7 +63,7 @@ const ApplyForPatientAssistance = props => {
         }
     }
 
-    if (props.location.search === "?signing")
+    if (location.search === "?signing")
     return (
         <iframe title="unique title"
             src={iframeUrl}

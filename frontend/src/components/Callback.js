@@ -1,16 +1,16 @@
 import React, { useEffect, useContext } from "react";
 import { completeCallback } from "../api/auth";
 import AppContext from "../context/appContext";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Callback = () => {
-    let history = useHistory();
+    let navigate = useNavigate();
 
     const { setLogged, setShowModal, setNextPage } = useContext(AppContext);
 
     useEffect(() => {
         completeCallback(setLogged, setShowModal);
-        history.push(localStorage.getItem("nextPage"))
+        navigate(localStorage.getItem("nextPage"))
         setNextPage("");
     }, []);
 
