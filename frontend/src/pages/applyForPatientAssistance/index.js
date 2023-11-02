@@ -13,20 +13,46 @@ const returnUrl = process.env.REACT_APP_DS_RETURN_URL + "/success?1";
 
 const ApplyForPatientAssistance = props => {
     let navigate = useNavigate();
-    const location = useLocation();
 
     const { t } = useTranslation("ApplyForPatientAssistance");
 
     const [ submitted, setSubmitted ] = useState(false);
     const [ formError, setFormError ] = useState([true, true, true]);
     const [ apiError, setApiError ] = useState("");
-    const [ iframeUrl, setIframeUrl ] = useState("");
+    const [ response, setResponse ] = useState(null);
 
     const { setBackdrop, logged, setLogged } = useContext(AppContext);
 
     useEffect(() => {
         if (!logged) navigate("")
     }, )
+
+    useEffect(() => {
+        if (!response) {
+            return;
+        }
+
+        window.DocuSign.loadDocuSign(response.client_id).then((docusign) => {
+            const signing = docusign.signing({
+                url: response.view_url,
+                displayFormat: "focused",
+                style: {
+                    branding: {
+                        primaryButton: {
+                            backgroundColor: "#9F289F",
+                            color: "#fff",
+                        },
+                    },
+                },
+            });
+
+            signing.on("sessionEnd", (_event) => {
+                navigate("/success?1");
+            });
+            
+            signing.mount("#agreement");
+        });
+    }, [response]);
 
     function isFormValid() {
         return formError.every(elem => elem === false)
@@ -54,8 +80,7 @@ const ApplyForPatientAssistance = props => {
 
         try{
             const response = await sendRequest(body, urlPath);
-            navigate(urlPath + "?signing");
-            setIframeUrl(response.data.view_url)
+            setResponse(response.data);
         } catch (error) {
             setApiError(error.message)
         } finally {
@@ -63,20 +88,6 @@ const ApplyForPatientAssistance = props => {
         }
     }
 
-    if (location.search === "?signing")
-    return (
-        <iframe title="unique title"
-            src={iframeUrl}
-            style={{
-                position: "fixed",
-                height: "100%",
-                width: "100%",
-                top: "0"
-            }}
-        ></iframe>
-    )
-
-    else
     return (
         <section className="content-section">
             <div className="container">
@@ -88,40 +99,42 @@ const ApplyForPatientAssistance = props => {
                     </div>
                 }
                 <div className="row justify-content-center">
-
                     <div className="col form-holder mb-4">
-                        <form onSubmit={handleSubmit}>
-                            <h4 className="card-title">{t("Title")}</h4>
-                            <InputText
-                                id="FirstName"
-                                label={t("FirstName")}
-                                errorText={t("ErrorText")}
-                                setFormError={setFormError}
-                                formError={formError}
-                                formErrorNum={0}
-                                submitted={submitted}
-                            />
-                            <InputText
-                                id="LastName"
-                                label={t("LastName")}
-                                errorText={t("ErrorText")}
-                                setFormError={setFormError}
-                                formError={formError}
-                                formErrorNum={1}
-                                submitted={submitted}
-                            />
-                            <InputEmail
-                                id="Email"
-                                label={t("Email")}
-                                warn={t("EmailWarn")}
-                                errorText={t("ErrorText")}
-                                setFormError={setFormError}
-                                formError={formError}
-                                formErrorNum={2}
-                                submitted={submitted}
-                            />
-                            <button className="h-card-button" type="submit">{t("ButtonName")}</button>
-                        </form>
+                        <h4 className="card-title">{t("Title")}</h4>
+                        {!response && 
+                            <form onSubmit={handleSubmit}>
+                                <InputText
+                                    id="FirstName"
+                                    label={t("FirstName")}
+                                    errorText={t("ErrorText")}
+                                    setFormError={setFormError}
+                                    formError={formError}
+                                    formErrorNum={0}
+                                    submitted={submitted}
+                                />
+                                <InputText
+                                    id="LastName"
+                                    label={t("LastName")}
+                                    errorText={t("ErrorText")}
+                                    setFormError={setFormError}
+                                    formError={formError}
+                                    formErrorNum={1}
+                                    submitted={submitted}
+                                />
+                                <InputEmail
+                                    id="Email"
+                                    label={t("Email")}
+                                    warn={t("EmailWarn")}
+                                    errorText={t("ErrorText")}
+                                    setFormError={setFormError}
+                                    formError={formError}
+                                    formErrorNum={2}
+                                    submitted={submitted}
+                                />
+                                <button className="h-card-button" type="submit">{t("ButtonName")}</button>
+                            </form>
+                        }
+                        {response && <div id="agreement"></div>}
                     </div>
 
                     <div className="w-100 d-block d-md-none"></div>
