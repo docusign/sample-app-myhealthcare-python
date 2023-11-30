@@ -20,8 +20,8 @@ MyHealthcare demonstrates the following:
    * Data Entry Tabs
    * Anchor positioning
 4. **Purchase a new insurance policy.**
-   This will enable users to apply for an assistance program through the website. Users will use embedded signing to fill out an application for an assistance program. As required by the example application, users will be able to upload identification and proof of income documents as an optional attachment.
-   * Embedded Signing
+   This will enable users to apply for an assistance program through the website. Users will use embedded signing with focused view to fill out an application for an assistance program. As required by the example application, users will be able to upload identification and proof of income documents as an optional attachment.
+   * Focused view
    * Templates
    * Signer Attachment tab
 

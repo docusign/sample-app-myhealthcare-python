@@ -5,7 +5,7 @@
   "SourceLink": "https://github.com/docusign/sample-app-myhealthcare-python",
 
   "FeaturesTitle": "MyHealthcare features:",
-  "FeaturesList": "<li>Remote signing</li><li>Templates</li><li>IDV (recipient authentication)</li><li>SMS delivery</li><li>Data entry tabs</li><li>Anchor positioning</li><li>Embedded signing</li><li>Signer attachment tabs</li>",
+  "FeaturesList": "<li>Remote signing</li><li>Templates</li><li>IDV (recipient authentication)</li><li>SMS delivery</li><li>Data entry tabs</li><li>Anchor positioning</li><li>Focused view</li><li>Signer attachment tabs</li>",
 
   "ToolsAndLinksTitle": "API Tools and Links",
   "DeveloperCenter": "Developer Center",
