@@ -33,6 +33,8 @@ const ApplyForPatientAssistance = props => {
         }
 
         window.DocuSign.loadDocuSign(response.client_id).then((docusign) => {
+          const elem = document.getElementsByClassName("col form-holder mb-4")[0];
+          elem.className = "col-sm-6";
             const signing = docusign.signing({
                 url: response.view_url,
                 displayFormat: "focused",
@@ -49,7 +51,7 @@ const ApplyForPatientAssistance = props => {
             signing.on("sessionEnd", (_event) => {
                 navigate("/success?1");
             });
-            
+
             signing.mount("#agreement");
         });
     }, [response]);
@@ -68,7 +70,7 @@ const ApplyForPatientAssistance = props => {
         if (!logged) navigate("")
 
         if (!isFormValid()) return;
-        
+
         setBackdrop(true);
         const el = event.target.elements;
         const body = {
@@ -101,7 +103,7 @@ const ApplyForPatientAssistance = props => {
                 <div className="row justify-content-center">
                     <div className="col form-holder mb-4">
                         <h4 className="card-title">{t("Title")}</h4>
-                        {!response && 
+                        {!response &&
                             <form onSubmit={handleSubmit}>
                                 <InputText
                                     id="FirstName"
@@ -134,7 +136,7 @@ const ApplyForPatientAssistance = props => {
                                 <button className="h-card-button" type="submit">{t("ButtonName")}</button>
                             </form>
                         }
-                        {response && <div id="agreement"></div>}
+                        {response && <div style={{height: "600px"}} id="agreement"></div>}
                     </div>
 
                     <div className="w-100 d-block d-md-none"></div>
