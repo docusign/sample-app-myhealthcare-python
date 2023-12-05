@@ -1,3 +1,4 @@
+import os
 from datetime import date, datetime
 from docusign_esign import (
     EnvelopesApi,
@@ -155,7 +156,9 @@ class Envelope:
             recipient_id="1",
             return_url=args["return_url"],
             user_name=f'{args["first_name"]} {args["last_name"]}',
-            email=args["email"]
+            email=args["email"],
+            frame_ancestors=[os.environ.get('REACT_APP_DS_RETURN_URL'), "https://apps-d.docusign.com"],
+            message_origins=["https://apps-d.docusign.com"]
         )
         # Obtain the recipient view URL for the signing ceremony
         # Exceptions will be caught by the calling function

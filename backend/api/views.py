@@ -1,3 +1,4 @@
+import os
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
@@ -86,4 +87,4 @@ def apply_for_patient_assistance(request):
     envelope_id = Envelope.send(request.session, envelope_definition)
     view_url = Envelope.get_view_url(request.session, envelope_id, args)
 
-    return Response({"view_url": view_url})
+    return Response({"view_url": view_url, "client_id": os.environ.get('CLIENT_ID')})
