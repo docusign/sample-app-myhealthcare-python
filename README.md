@@ -7,7 +7,7 @@ MyHealthcare sample application written in Python 3.7 Django DRF (server) and Re
 
 MyHealthcare demonstrates the following:
 
-1. Authentication with DocuSign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken)
+1. Authentication with Docusign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken)
 2. **Request Medical Records:**
    This will enable the user to request medical records through the website. The user will be sent an email to electronically sign a medical release form. Users will verify identity using IDV and sign the document.
    * Remote signing
@@ -28,8 +28,8 @@ MyHealthcare demonstrates the following:
 ## Installation
 
 ### Prerequisites
-* A DocuSign Developer account (email and password) on [demo.docusign.net](https://demo.docusign.net). If you don't already have a developer account, create a [free account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16535).
-* A DocuSign integration key (a client ID) that is configured to use **JSON Web Token (JWT) Grant**.
+* A Docusign Developer account (email and password) on [demo.docusign.net](https://demo.docusign.net). If you don't already have a developer account, create a [free account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16535).
+* A Docusign integration key (a client ID) that is configured to use **JSON Web Token (JWT) Grant**.
    You will need the **integration key** itself and its **RSA key pair**. To use this application, you must add your application's **Redirect URI** to your integration key. To run locally, add http://localhost:3000/callback as your **Reidirect URI**. This [**video**](https://www.youtube.com/watch?v=GgDqa7-L0yo) demonstrates how to create an integration key (client ID) for a user application like this example.
 * [Python 3.7+](https://www.python.org/downloads/)
 * The Python [venv](https://docs.python.org/3/library/venv.html#module-venv) module
@@ -50,8 +50,8 @@ The example_private.key file is located in the backend folder. Replace the conte
 * **DS_TARGET_ACCOUNT_ID** - Target account ID. Use FALSE to indicate the user's default
 * **REACT_APP_DS_RETURN_URL** - URL where the back end of the application is located (If you run it locally, use `http://localhost:3000`)
 * **REACT_APP_API_BASE_URL** - URL where the front end of the application is located; will be used by Docusign to redirect back after signing ceremony (If you run it locally, use `http://localhost:5001/api`)
-* **DS_AUTH_SERVER** - The DocuSign authentication server (for testing purposes, use `https://account-d.docusign.com`)
-* **DS_DEMO_SERVER** - Link to the DocuSign demo server (for testing purposes, use `https://demo.docusign.net`)
+* **DS_AUTH_SERVER** - The Docusign authentication server (for testing purposes, use `https://account-d.docusign.com`)
+* **DS_DEMO_SERVER** - Link to the Docusign demo server (for testing purposes, use `https://demo.docusign.net`)
 * **DJANGO_SECRET** - Your Django secret key
 * **BACKEND_ALLOWED_HOSTS** - URL of your server
 

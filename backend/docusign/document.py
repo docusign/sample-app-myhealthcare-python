@@ -18,7 +18,7 @@ def create_document(doc_file):
 
     name, file_extension = doc_file.split('.')
 
-    return Document(  # create the DocuSign document object
+    return Document(  # create the Docusign document object
         document_base64=base64_file_content,
         name=name,  # can be different from actual file name
         file_extension=file_extension,  # many different document types are accepted
