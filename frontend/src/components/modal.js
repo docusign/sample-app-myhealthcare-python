@@ -32,7 +32,7 @@ const ModalLogin = props => {
                 await getStatus(setLogged);
                 handleClose();
                 navigate(nextPage)
-                setNextPage("");
+                setNextPage("/");
             }
         } catch(error) {
             if (!error.response || error.response.status !== 401) {
