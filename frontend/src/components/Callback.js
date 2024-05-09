@@ -10,8 +10,8 @@ export const Callback = () => {
 
     useEffect(() => {
         completeCallback(setLogged, setShowModal);
-        navigate(localStorage.getItem("nextPage"))
-        setNextPage("");
+        navigate(localStorage.getItem("nextPage") || "/");
+        setNextPage("/");
     }, []);
 
     return (
