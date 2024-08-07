@@ -2,7 +2,7 @@ asgiref==3.7.2
 astroid==2.15.6
 certifi==2023.5.7
 cffi==1.15.1
-Django==4.2.3
+Django==4.2.15
 django-cors-headers==4.1.0
 djangorestframework==3.14.0
 docusign-esign==3.23.0
