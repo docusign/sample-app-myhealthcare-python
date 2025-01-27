@@ -6,7 +6,6 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container text-center pt-3">
-                <span className="copyright">{t("Copyright")}</span>
             </div>
         </footer>
     )

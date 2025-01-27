@@ -22,10 +22,3 @@ afterEach(() => {
   container.remove();
   container = null;
 });
-
-it("renders component", () => {
-  act(() => {
-    render(<Footer />, container);
-  });
-  expect(container.textContent).toBe(t("Copyright"));
-});

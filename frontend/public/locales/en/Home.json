@@ -24,8 +24,6 @@
     "FeaturesList": "<li>Focused view</li><li>Templates</li><li>Signer attachment tab</li>"
   },
 
-  "PreFooter1": "Docusign: It's time to agree better",
-  "PreFooter2": "Docusign helps organizations connect and automate how they prepare, sign, act on, and manage agreements.",
   "GetFreeLinkName": "Get a free developer account",
   "GetFreeLink": "https://go.docusign.com/sandbox/productshot?elq=16799",
   "PythonSDKLinkName": "Python SDK documentation",

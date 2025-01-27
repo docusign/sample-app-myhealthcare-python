@@ -5,7 +5,5 @@
   "GitHubLink": "https://github.com/docusign/sample-app-healthcare-python",
   "AboutLinkText": "About",
   "LogInText": "Log in",
-  "LogOutText": "Log out",
-
-  "Copyright": "© 2025 Docusign Inc."
+  "LogOutText": "Log out"
 }
