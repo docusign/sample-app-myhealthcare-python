@@ -50,7 +50,7 @@ class Template:
             documents=[document],
             email_subject="Please sign this document",
             recipients=Recipients(signers=[signer]),
-            description="Example template created via the MyHealthcare App",
+            description="Example template created via the Healthcare Sample App",
             name=template_name,
             shared="false",
             status="sent"
