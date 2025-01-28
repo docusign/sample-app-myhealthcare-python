@@ -1,10 +1,10 @@
 {
-  "Title": "MyHealthcare Docusign Sample Application for the healthcare industry",
+  "Title": "Healthcare Sample App for the healthcare industry",
   "Description": "This application demonstrates some common Docusign API workflows including Docusign eSignature and real-time status.",
   "SourceDescription": "Source on GitHub:",
-  "SourceLink": "https://github.com/docusign/sample-app-myhealthcare-python",
+  "SourceLink": "https://github.com/docusign/sample-app-healthcare-python",
 
-  "FeaturesTitle": "MyHealthcare features:",
+  "FeaturesTitle": "Healthcare Sample App features:",
   "FeaturesList": "<li>Remote signing</li><li>Templates</li><li>IDV (recipient authentication)</li><li>SMS delivery</li><li>Data entry tabs</li><li>Anchor positioning</li><li>Focused view</li><li>Signer attachment tabs</li>",
 
   "ToolsAndLinksTitle": "API Tools and Links",

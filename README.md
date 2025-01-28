@@ -1,11 +1,11 @@
-# Python and React: MyHealthcare Sample Application
+# Python and React: Healthcare Sample App
 
-### Github repo: MyHealthcareApp
+### Github repo: Healthcare Sample App
 
 ## Introduction
-MyHealthcare sample application written in Python 3.7 Django DRF (server) and React (client). You can find a live instance running at [https://myhealthcare.sampleapps.docusign.com/](https://myhealthcare.sampleapps.docusign.com/).
+The Healthcare Sample App written in Python 3.7 Django DRF (server) and React (client). You can find a live instance running at [https://healthcare.sampleapps.docusign.com/](https://healthcare.sampleapps.docusign.com/).
 
-MyHealthcare demonstrates the following:
+The Healthcare Sample App demonstrates the following:
 
 1. Authentication with Docusign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken)
 2. **Request Medical Records:**
@@ -59,8 +59,8 @@ The example_private.key file is located in the backend folder. Replace the conte
 
 **Manual**
 
-1. Download or clone this repository to your workstation in a new folder named **sample-app-myhealthcare-python**.
-2. Navigate to that folder: **`cd sample-app-myhealthcare-python`**
+1. Download or clone this repository to your workstation in a new folder named **sample-app-healthcare-python**.
+2. Navigate to that folder: **`cd sample-app-healthcare-python`**
 3. Navigate to backend folder: **`cd backend`**
 4. Upgrade pip: **`pip3 install --upgrade pip`**
 5. Install python packages: **`pip3 install -r requirements.txt`**
@@ -71,8 +71,8 @@ The example_private.key file is located in the backend folder. Replace the conte
 
 **Using installation scripts**
 
-1. Download or clone this repository to your workstation in a new folder named **sample-app-myhealthcare-python**.
-2. Navigate to that folder:**`cd sample-app-myhealthcare-python`**
+1. Download or clone this repository to your workstation in a new folder named **sample-app-healthcare-python**.
+2. Navigate to that folder:**`cd sample-app-healthcare-python`**
 3. Make the installation script executable: **`chmod +x scripts/install.sh`**
 4. Run the installation script: **`./scripts/install.sh`**
 5. Update the **.env** file with the integration key and other settings.
@@ -85,11 +85,11 @@ All installation scripts are located in the **scripts** folder.
 3. Make the installation script executable: **`chmod +x scripts/clean.sh`**
 4. To remove the virtual environment and modules, run **`./scripts/clean.sh`**
 
-## Running MyHealthcare
+## Running the Healthcare Sample App
 
 ### Manual
 
-1. Navigate to the application folder: **`cd sample-app-myhealthcare-python`**
+1. Navigate to the application folder: **`cd sample-app-healthcare-python`**
 2. Navigate to the backend folder: **`cd backend`**
 3. Run the application: **`python3 manage.py runserver localhost:5001`**
 4. Navigate to frontend folder: **`cd ../frontend`**
@@ -97,12 +97,12 @@ All installation scripts are located in the **scripts** folder.
 6. Open a browser to **http://localhost:3000**
 
 ### Using scripts:
-1. Navigate to the application folder: **`cd sample-app-myhealthcare-python`**
+1. Navigate to the application folder: **`cd sample-app-healthcare-python`**
 2. Make the script executable: **`chmod +x scripts/run.sh`**
 3. run **`./scripts/run.sh`**
 
 ### Using Docker:
-1. **`cd sample-app-myhealthcare-python`**
+1. **`cd sample-app-healthcare-python`**
 2. **`cd backend`**
 3. **`docker build -t backend:latest .`**
 4. **`cd ..`**

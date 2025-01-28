@@ -1,11 +1,9 @@
 ﻿{
-  "ApplicationName": "MyHealthcare",
+  "ApplicationName": "Healthcare Sample App",
 
   "GitHubLinkText": "GitHub Source",
-  "GitHubLink": "https://github.com/docusign/sample-app-myhealthcare-python",
+  "GitHubLink": "https://github.com/docusign/sample-app-healthcare-python",
   "AboutLinkText": "About",
   "LogInText": "Log in",
-  "LogOutText": "Log out",
-
-  "Copyright": "© 2024 Docusign Inc."
+  "LogOutText": "Log out"
 }

@@ -1,7 +1,7 @@
 {
   "Header1": {
-    "P1": "Welcome to ",
-    "P2": "MyHealthcare"
+    "P1": "Welcome to the ",
+    "P2": "Healthcare Sample App"
   },
   "Header2": "A self-service patient portal",
 
@@ -24,8 +24,6 @@
     "FeaturesList": "<li>Focused view</li><li>Templates</li><li>Signer attachment tab</li>"
   },
 
-  "PreFooter1": "Docusign: It's time to agree better",
-  "PreFooter2": "Docusign helps organizations connect and automate how they prepare, sign, act on, and manage agreements.",
   "GetFreeLinkName": "Get a free developer account",
   "GetFreeLink": "https://go.docusign.com/sandbox/productshot?elq=16799",
   "PythonSDKLinkName": "Python SDK documentation",

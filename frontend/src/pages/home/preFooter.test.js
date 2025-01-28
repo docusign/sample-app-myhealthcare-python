@@ -13,8 +13,6 @@ describe("pre footer", () => {
     const { container } = render(
         <PreFooter />
     );
-    expect(screen.getByText(/PreFooter1/)).toBeInTheDocument();
-    expect(screen.getByText(/PreFooter2/)).toBeInTheDocument();
     expect(screen.getByText(/GetFreeLinkName/)).toBeInTheDocument();
     expect(screen.getByText(/PythonSDKLinkName/)).toBeInTheDocument();
   })
